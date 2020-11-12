@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  html {
+    overflow-y: scroll;
+    font-family: $font-main;
+    font-size: $font-size;
+    color: $color-gray;
+  }
+  h1 {
+    font-family: $font-header;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    line-height: 1.2em;
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+    letter-spacing: 0.08em;
+  }
+  @include md {
+    font-size: 1.875rem;
+    letter-spacing: 0.08em;
+  }
+}
+h2 {
+  font-size: 2.5rem;
+  font-family: $font-header;
+  font-weight: bold;
+  color: $color-primary;
+  letter-spacing: 0.1em;
+  margin: 0;
+  @include lg-md {
+    font-size: 2rem;
+  }
+  @include md-sm {
+    font-size: 1.5rem;
+  }
+  @include sm {
+    font-size:1.5rem;
+    text-align: center;   
+  }
+}
+  a {
+    text-decoration: none;
+    color: $color-light;
+  }
+  .btn,
+  .btn-accent {
+    display: block;
+    padding: 18px $gap;
+    font-size: 1.125rem;
+    height: 60px;
+    text-align: center;
+    transition: background-color 0.5s;
+    letter-spacing: 0.1em;
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+  }
+}
+  .btn {
+    background-color: rgba($color-light, 0.1);
+    border: 2px solid $color-light;
+    min-width: 250px;
+    &:first-of-type {
+      margin-right: $gap;
+      @include md-sm {
+        margin-right: $gap;
+      }
+      @include sm {
+        margin-bottom: $gap;
+        margin-left: $gap;
+      }
+    }
+    @include lg-md {
+      min-width: auto;
+      width: 200px;
+      height: 50px;
+      padding-top: 14px;
+      padding-bottom: 14px;;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+    @include md-sm {
+      min-width: auto;
+      width: 170px;
+      height: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+    @include sm {
+      min-width: auto;
+      width: 170px;
+      height: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }   
+  }
+  .btn-accent {
+    background-color: rgba($color-primary, 0.8);
+    min-width: 350px;
+    border: 2px solid $color-primary;   
+    @include sm {
+      min-width: auto;
+      width: 100%;
+    }
+}
+
+
+

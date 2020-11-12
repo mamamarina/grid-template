@@ -1,0 +1,108 @@
+@for $i from 1 through 6 {
+    .posts-box--#{$i} {
+    grid-area: p#{$i};
+  }
+}
+.posts {
+  @extend %container;
+  &__container {
+    display: grid;
+    grid-gap: $gap;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "p1 p1 p2 p3"
+                         "p4 p5 p6 p6";
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "p1 p1 p2"
+                           "p3 p4 p4"
+                           "p5 p5 p6";
+    }
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "p1 p2"
+                           "p3 p4"
+                           "p5 p6";
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+      grid-template-areas: "p1" 
+                           "p2" 
+                           "p3"
+                           "p4" 
+                           "p5"
+                           "p6";
+    }
+  }
+  &__title {
+    margin-top: 100px;
+    margin-bottom: 56px;
+    line-height: 1.2;
+    @include lg-md {
+      margin-top: 81px;
+      margin-bottom: 41px;
+    }
+    @include md-sm {
+      margin-top: 60px;
+      margin-bottom: 36px;
+    }
+    @include sm {
+      margin-top: 60px;
+      margin-bottom: 36px;
+    }
+  }
+  &__button {
+      padding-top: $gap;
+      padding-bottom: 100px;
+      display: flex;
+      justify-content: center;
+      @include lg-md {
+        padding-bottom: 80px;
+      }
+      @include md-sm {
+        padding-bottom: 60px;
+      }
+      @include sm {
+        padding-bottom: 60px;
+      }
+    }
+  &-box {
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    background-color: $color-posts-bcground;  
+    &:hover .posts-box__image{
+      transform: scale(1.1);
+    }
+    &:hover{
+      background-color: $color-gray-light;
+    }
+    &__image-wrap {
+      overflow: hidden;
+    }
+    &__image{
+      height:300px;
+      transition: transform 0.5s;  
+      width:100%;
+      object-fit: cover;
+    }
+    &__text {
+      display: grid;
+      color: $color-gray;
+      padding: $gap;
+      text-align: center;
+      transition: background-color 0.5s;
+    &-title {
+      font-size: 1.125rem;
+      letter-spacing: 0.05em;
+      font-family: $font-header;
+      align-self: end;
+      } 
+    &-paragraph {
+      &--1 {
+      @include lg-md {
+        margin-top: 16.5px;
+      }
+    }   
+  } 
+  }
+}  
+}
