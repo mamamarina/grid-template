@@ -1218,7 +1218,7 @@ a {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
   .about-text {
-    padding-right: 0px;
+    padding-right: 0;
   }
   .about-text__title {
     margin-top: 99px;
@@ -1284,7 +1284,7 @@ a {
     grid-gap: 40px;
   }
   .about-text {
-    padding-right: 0px;
+    padding-right: 0;
   }
   .about-text__title {
     margin-top: 80px;

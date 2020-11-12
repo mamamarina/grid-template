@@ -79,7 +79,7 @@ h2 {
     }
     @include lg-md {
       min-width: auto;
-      width: 200px;
+      width: $gap*10;
       height: 50px;
       padding-top: 14px;
       padding-bottom: 14px;;
@@ -89,7 +89,7 @@ h2 {
     @include md-sm {
       min-width: auto;
       width: 170px;
-      height: 40px;
+      height: $gap*2;
       padding-top: 10px;
       padding-bottom: 10px;;
       font-size: 1rem;
@@ -98,7 +98,7 @@ h2 {
     @include sm {
       min-width: auto;
       width: 170px;
-      height: 40px;
+      height: $gap*2;
       padding-top: 10px;
       padding-bottom: 10px;;
       font-size: 1rem;

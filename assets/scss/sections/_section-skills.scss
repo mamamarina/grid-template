@@ -1,5 +1,5 @@
 .skills {
-  padding: 10px 10px 40px;
+  padding: 10px 10px $gap*2;
   @include sm {
     padding: $gap;
   }

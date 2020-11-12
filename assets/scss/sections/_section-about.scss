@@ -3,9 +3,9 @@
   &__container {
     display: grid;
     grid-template-columns: 1fr 271px;
-    grid-gap: 100px;
+    grid-gap: $gap*5;
     @include lg-md{
-      grid-gap: 40px;
+      grid-gap: $gap*2;
     }
     @include md-sm {
       grid-gap: $gap;
@@ -24,10 +24,10 @@
     padding-right: 1px;
   }
   @include lg-min {
-    padding-right: 0px;
+    padding-right: 0;
   }
   @include lg-md {
-    padding-right: 0px;
+    padding-right: 0;
   }
   @include md-sm {
     padding-right: 0;
@@ -37,21 +37,21 @@
     padding-right: 0;
   }
     &__title {
-      margin-top: 100px;
+      margin-top: $gap*5;
       margin-bottom: 51px;
       @include lg-min {
         margin-top: 99px;
       }
       @include lg-md {
-        margin-top: 80px;
+        margin-top: $gap*4;
         margin-bottom: 37px;
       }
       @include md-sm {
-        margin-top: 60px;
+        margin-top: $gap*3;
         margin-bottom: 31px;
       }
       @include sm {
-        margin-top: 60px;
+        margin-top: $gap*3;
         margin-bottom: 32px;
       }
       &-paragraph {
@@ -98,13 +98,13 @@
     content:"";
     position: absolute;
     width: 2px;
-    height: 200px;
+    height: $gap*10;
     background-color: rgba(99, 117, 136, 0.1);
     top: 0;
     right: 0;
     margin-right: -50px;
     @include lg-md {
-      margin-right: -20px;
+      margin-right: - ($gap);
     }
     @include md-sm {
       margin-right: -15px;
@@ -130,11 +130,11 @@
       }
     &-picture__image {
       max-width: 100%;
-      max-height: 480px;
-      height:auto;
+      max-height: $gap*24;
+      height: auto;
       margin-top: 5px;
         @include lg-md {
-          margin-bottom: 20px;
+          margin-bottom: $gap;
         }
         @include md-sm {
           margin-bottom: 38px;

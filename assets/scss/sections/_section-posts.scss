@@ -34,7 +34,7 @@
     }
   }
   &__title {
-    margin-top: 100px;
+    margin-top: $gap*5;
     margin-bottom: 56px;
     line-height: 1.2;
     @include lg-md {
@@ -42,32 +42,32 @@
       margin-bottom: 41px;
     }
     @include md-sm {
-      margin-top: 60px;
+      margin-top: $gap*3;
       margin-bottom: 36px;
     }
     @include sm {
-      margin-top: 60px;
+      margin-top: $gap*3;
       margin-bottom: 36px;
     }
   }
   &__button {
       padding-top: $gap;
-      padding-bottom: 100px;
+      padding-bottom: $gap*5;
       display: flex;
       justify-content: center;
       @include lg-md {
-        padding-bottom: 80px;
+        padding-bottom: $gap*4;
       }
       @include md-sm {
-        padding-bottom: 60px;
+        padding-bottom: $gap*3;
       }
       @include sm {
-        padding-bottom: 60px;
+        padding-bottom: $gap*3;
       }
     }
   &-box {
     display: grid;
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: $gap*15 1fr;
     background-color: $color-posts-bcground;  
     &:hover .posts-box__image{
       transform: scale(1.1);
@@ -79,9 +79,9 @@
       overflow: hidden;
     }
     &__image{
-      height:300px;
+      height: $gap*15;
       transition: transform 0.5s;  
-      width:100%;
+      width: 100%;
       object-fit: cover;
     }
     &__text {

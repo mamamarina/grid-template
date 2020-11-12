@@ -6,7 +6,7 @@
     @extend %container;
     display: grid;
     grid-gap: $gap;
-    padding: 30px $gap;
+    padding: $gap*1.5 $gap;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "b1 b2 b3";
     @include md-sm {
@@ -36,7 +36,7 @@
   &--submit {
     display:block;
     width:100%;
-    height:60px;
+    height: $gap*3;
     padding: 18px $gap;
     background-color:rgba($color-light, 0.1);
     text-align: center;
