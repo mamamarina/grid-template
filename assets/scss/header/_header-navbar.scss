@@ -1,129 +1,144 @@
 .header-navbar {
-  @include md {
-    display: flex;
-    justify-content: flex-end;
-  }
-  &__btn {
-    display: none;
-    width: 30px;
-    height: 22.5px;
-    position: relative;
-    transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    @include md-min {
-      display: none;
-    }
     @include md {
-      display: block;
+      display: flex;
+      justify-content: flex-end;
     }
-  &-row {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 50%;
-    background: $color-light;
-    opacity: 1;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
-    &:nth-child(even) {
-      left: 50%;
-      border-radius: 0 3px 3px 0;
-    }
-    &:nth-child(odd) {
-      left:0px;
-      border-radius: 3px 0 0 3px;
-    }   
-    &:nth-child(1), 
-    &:nth-child(2) {
-      top: 0px;
-    }
-    &:nth-child(3), 
-    &:nth-child(4) {
-      top: 9px;
-    }
-    &:nth-child(5), 
-    &:nth-child(6) {
-      top: 18px;
-    }
-  }
-  &--active span {
-    &:nth-child(1),
-    &:nth-child(6) {
-      transform: rotate(45deg);
-    }
-    &:nth-child(2),
-    &:nth-child(5) {
-      transform: rotate(-45deg);
-    }
-    &:nth-child(1) {
-      left: 2.5px;
-      top: 3.5px;
-    }
-    &:nth-child(2) {
-      left: calc(50% - 2.5px);
-      top: 3.5px;
-    }
-    &:nth-child(3) {
-      left: -50%;
-      opacity: 0;
-    }
-    &:nth-child(4) {
-      left: 100%;
-      opacity: 0;
-    }
-    &:nth-child(5) {
-      left: 2.5px;
-      top: 14.5px;
-    }
-    &:nth-child(6) {
-      left: calc(50% - 2.5px);
-      top: 14.5px;
-    }
-  }
-}
-  &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 1.125rem;
-    text-transform: capitalize; 
-    @include md-min {
-      display: grid;
-      justify-content: end;
-      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    }
-    @include md {
-      display: none;
-      &--active {
+    &__btn {
+      position: relative;
+      width: $gap*1.5;
+      height: 22.5px;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+      @include md-min {
+        display: none;
+      }
+      @include md {
+        display: block;
+      }
+      &-row {
         display: block;
         position: absolute;
-        top: 30%;
-        right: $gap*2;   
+        height: 3px;
+        width: 50%;
+        background: $color-light;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+        &:nth-child(even) {
+          left: 50%;
+          border-radius: 0 3px 3px 0;
+        }
+        &:nth-child(odd) {
+          left:0px;
+          border-radius: 3px 0 0 3px;
+        }   
+        &:nth-child(1), 
+        &:nth-child(2) {
+          top: 0px;
+        }
+        &:nth-child(3), 
+        &:nth-child(4) {
+          top: 9px;
+        }
+        &:nth-child(5), 
+        &:nth-child(6) {
+          top: 18px;
+        }
     }
-  }
-}  
-  &__item {
-    padding: $gap;
-    letter-spacing: 0.09em;
-    &:last-of-type {
-      padding: $gap 0 $gap $gap;
+      &--active span {
+        &:nth-child(1),
+        &:nth-child(6) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2),
+        &:nth-child(5) {
+          transform: rotate(-45deg);
+        }
+        &:nth-child(1) {
+         left: 2.5px;
+          top: 3.5px;
+        }
+        &:nth-child(2) {
+          left: calc(50% - 2.5px);
+          top: 3.5px;
+        }
+        &:nth-child(3) {
+          left: -50%;
+          opacity: 0;
+        }
+        &:nth-child(4) {
+          left: 100%;
+          opacity: 0;
+        }
+        &:nth-child(5) {
+         left: 2.5px;
+          top: 14.5px;
+        }
+        &:nth-child(6) {
+          left: calc(50% - 2.5px);
+          top: 14.5px;
+       }
+      } 
     }
-    @include md {
-      background-color: rgba( $color-light, 0.1);
-      border-bottom: 1px solid $color-light;
-      position: relative;
-      padding: $gap/2;
-      margin-right: $gap;
+    
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 1.125rem;
+      text-transform: capitalize; 
+      z-index: 1;
+      @include md-min {
+        display: grid;
+        justify-content: end;
+        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      }
+      @include md {
+        position: absolute;
+        top: 65%;
+        right: $gap*2;
+        text-align: left;
+        display: none;
+      }
+      @include sm {
+        top: 50%;
+        right: $gap/2;  
+      }
+      &--active {
+        @include md {
+          display: block;
+        }
+      }
+    }
+    &__item {
+      padding: $gap;
+      letter-spacing: 0.09em;
       &:last-of-type {
-        padding: 10px 10px 10px 10px;
+        padding: $gap 0 $gap $gap;
+      }
+      @include md {
+        background-color: rgba( $color-light, 0.1);
+        border-bottom: 1px solid $color-light;
+        padding: $gap/2;
+        margin-right: $gap;
+        &:last-of-type {
+          padding: 10px 10px 10px 10px;
+        }
+      }
+      @include sm {
+        background-color: transparent;
+        border:none;
+      }
+  } 
+    &__link {
+      transition: color 0.5s;
+      @include sm {
+        text-decoration: underline;
+        font-size: $font-size;
+      }
+      &:hover {
+        color: $color-accent;
+      }
     }
-  }
-} 
-  &__link {
-    transition: color 0.5s;
-    &:hover {
-      color: $color-accent;
-    }
-  }
 }

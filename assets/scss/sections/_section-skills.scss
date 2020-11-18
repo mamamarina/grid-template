@@ -6,6 +6,7 @@
   &__container {
     display: grid;
   @include lg-min {
+    min-height: 100vh;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a1 a1 a2 a3"

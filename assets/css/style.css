@@ -594,10 +594,9 @@ a {
 }
 
 .header-navbar__btn {
-  display: none;
+  position: relative;
   width: 30px;
   height: 22.5px;
-  position: relative;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -692,6 +691,7 @@ a {
   padding: 0;
   font-size: 1.125rem;
   text-transform: capitalize;
+  z-index: 1;
 }
 
 .header-navbar__item {
@@ -915,7 +915,7 @@ a {
   justify-self: center;
 }
 
-.about-picture__image {
+.about-picture__box-image {
   max-width: 100%;
   max-height: 480px;
   height: auto;
@@ -942,7 +942,6 @@ a {
   height: 60px;
   padding: 0 30px 0 30px;
   background-color: rgba(255, 255, 255, 0.051);
-  color: #e5e5e5;
   text-align: left;
   font-size: 1.125rem;
   border: 2px solid transparent;
@@ -953,41 +952,23 @@ a {
   transition: 0.5s ease-in-out;
 }
 
-.form__input--email:hover, .form__input--name:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 2px solid #637588;
-  border-bottom: 2px solid #e5e5e5;
-}
-
-.form__input--email:focus, .form__input--name:focus {
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 2px solid #637588;
-  border-bottom: 2px solid #e5e5e5;
-}
-
 .form__input--email:hover::-webkit-input-placeholder, .form__input--email:focus::-webkit-input-placeholder, .form__input--name:hover::-webkit-input-placeholder, .form__input--name:focus::-webkit-input-placeholder {
-  color: #bbbbbb;
   font-weight: 100;
 }
 
 .form__input--email:hover::-moz-placeholder, .form__input--email:focus::-moz-placeholder, .form__input--name:hover::-moz-placeholder, .form__input--name:focus::-moz-placeholder {
-  color: #bbbbbb;
   font-weight: 100;
 }
 
 .form__input--email:hover:-ms-input-placeholder, .form__input--email:focus:-ms-input-placeholder, .form__input--name:hover:-ms-input-placeholder, .form__input--name:focus:-ms-input-placeholder {
-  color: #bbbbbb;
   font-weight: 100;
 }
 
 .form__input--email:hover::-ms-input-placeholder, .form__input--email:focus::-ms-input-placeholder, .form__input--name:hover::-ms-input-placeholder, .form__input--name:focus::-ms-input-placeholder {
-  color: #bbbbbb;
   font-weight: 100;
 }
 
 .form__input--email:hover::placeholder, .form__input--email:focus::placeholder, .form__input--name:hover::placeholder, .form__input--name:focus::placeholder {
-  color: #bbbbbb;
   font-weight: 100;
 }
 
@@ -995,8 +976,61 @@ a {
   grid-area: b1;
 }
 
+.form__input--name::-webkit-input-placeholder {
+  color: #e5e5e5;
+}
+
+.form__input--name::-moz-placeholder {
+  color: #e5e5e5;
+}
+
+.form__input--name:-ms-input-placeholder {
+  color: #e5e5e5;
+}
+
+.form__input--name::-ms-input-placeholder {
+  color: #e5e5e5;
+}
+
+.form__input--name::placeholder {
+  color: #e5e5e5;
+}
+
+.form__input--name:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid #637588;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.form__input--name:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid #637588;
+  border-bottom: 2px solid #e5e5e5;
+}
+
 .form__input--email {
   grid-area: b2;
+}
+
+.form__input--email::-webkit-input-placeholder {
+  color: #9A9EAB;
+}
+
+.form__input--email::-moz-placeholder {
+  color: #9A9EAB;
+}
+
+.form__input--email:-ms-input-placeholder {
+  color: #9A9EAB;
+}
+
+.form__input--email::-ms-input-placeholder {
+  color: #9A9EAB;
+}
+
+.form__input--email::placeholder {
+  color: #9A9EAB;
 }
 
 .form__input--submit {
@@ -1213,6 +1247,7 @@ a {
     font-size: 3.75rem;
   }
   .skills__container {
+    min-height: 100vh;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
@@ -1301,7 +1336,7 @@ a {
   .about-text__content-paragraph--1::after {
     margin-right: -20px;
   }
-  .about-picture__image {
+  .about-picture__box-image {
     margin-bottom: 20px;
   }
   .posts__container {
@@ -1340,18 +1375,18 @@ a {
     display: block;
   }
   .header-navbar__list {
+    position: absolute;
+    top: 65%;
+    right: 40px;
+    text-align: left;
     display: none;
   }
   .header-navbar__list--active {
     display: block;
-    position: absolute;
-    top: 30%;
-    right: 40px;
   }
   .header-navbar__item {
     background-color: rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid #ffffff;
-    position: relative;
     padding: 10px;
     margin-right: 20px;
   }
@@ -1405,7 +1440,7 @@ a {
   .about-text__content-paragraph--1::after {
     margin-right: -15px;
   }
-  .about-picture__image {
+  .about-picture__box-image {
     margin-bottom: 38px;
   }
   .form__container {
@@ -1450,6 +1485,18 @@ a {
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
   }
+  .header-navbar__list {
+    top: 50%;
+    right: 10px;
+  }
+  .header-navbar__item {
+    background-color: transparent;
+    border: none;
+  }
+  .header-navbar__link {
+    text-decoration: underline;
+    font-size: 16px;
+  }
   .header-content__title {
     margin: 0 0 33px 0;
   }
@@ -1492,7 +1539,7 @@ a {
   .about-text__content-paragraph--1::after {
     display: none;
   }
-  .about-picture__image {
+  .about-picture__box-image {
     margin-top: 0;
   }
   .form__container {

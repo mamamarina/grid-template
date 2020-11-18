@@ -124,23 +124,23 @@
     }
   }
   }  
-      &-picture__box {
-      align-self: center;
-      justify-self: center;
+  &-picture__box {
+  align-self: center;
+  justify-self: center;
+  &-image {
+    max-width: 100%;
+    max-height: $gap*24;
+    height: auto;
+    margin-top: 5px;
+      @include lg-md {
+        margin-bottom: $gap;
       }
-    &-picture__image {
-      max-width: 100%;
-      max-height: $gap*24;
-      height: auto;
-      margin-top: 5px;
-        @include lg-md {
-          margin-bottom: $gap;
-        }
-        @include md-sm {
-          margin-bottom: 38px;
-        }
-        @include sm {
-          margin-top: 0;
-        }
-    }
+      @include md-sm {
+        margin-bottom: 38px;
+      }
+      @include sm {
+        margin-top: 0;
+      }
+      }
+    } 
   }

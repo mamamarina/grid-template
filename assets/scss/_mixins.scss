@@ -47,30 +47,17 @@
 @mixin input {
   display:block;
   width:100%;
-  height: 60px;
+  height: $gap*3;
   padding: 0 $gap*1.5 0 $gap*1.5;
   background-color: rgba($color-light, 0.051);
-  color: $color-gray-light;
   text-align: left;
   font-size: 1.125rem;
   border: 2px solid transparent;
   border-bottom: 2px solid $color-gray;
   letter-spacing: 0.15em;
   transition: 0.5s ease-in-out;
-    &:hover {
-      background-color: rgba($color-light, 0.15);
-      border: 2px solid $color-gray;
-      border-bottom: 2px solid $color-gray-light;
-    }
-    &:focus {
-      outline: none;
-      background-color: rgba($color-light, 0.15);
-      border: 2px solid $color-gray;
-      border-bottom: 2px solid $color-gray-light;
-    }
     &:hover::placeholder,
     &:focus::placeholder {
-      color: $color-gray-medium;
       font-weight: 100;
     }
   }

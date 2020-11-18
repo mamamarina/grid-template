@@ -1,14 +1,14 @@
 $(document).ready(function() {
-	$('.header-navbar__btn').on('click', function() {
-		$(this).toggleClass('header-navbar__btn--active');
-		$('.header-navbar__list').toggleClass('header-navbar__list--active');
+	  $('.header-navbar__btn').on('click', function(){ 
+	  $(this).toggleClass('header-navbar__btn--active');
+	  $('.header-navbar__list').toggleClass('header-navbar__list--active');
 	});
-});
+  });
 
 
-// $(document).ready(function(){
-// 	$('.header-navbar__btn').on('click', function(){
-// 	  $(this).toggleClass('header-navbar__btn--active');
-// 	  $('.header-navbar__list').stop(true, true).slideToggle(500);
-// 	});
-//   });
+
+  
+
+
+
+

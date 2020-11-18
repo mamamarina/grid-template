@@ -25,9 +25,26 @@
     @include input;
   }
   &--name {
+    &::placeholder {
+      color: $color-gray-light;
+    }
+    &:hover {
+      background-color: rgba($color-light, 0.15);
+      border: 2px solid $color-gray;
+      border-bottom: 2px solid $color-gray-light;
+    }
+    &:focus {
+      outline: none;
+      background-color: rgba($color-light, 0.15);
+      border: 2px solid $color-gray;
+      border-bottom: 2px solid $color-gray-light;
+    }
     grid-area: b1;
   }
   &--email {
+    &::placeholder {
+      color: $color-gray-mediumone;
+    }
     grid-area: b2;
   }
   &--submit {
