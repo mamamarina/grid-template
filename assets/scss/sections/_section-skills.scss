@@ -1,20 +1,20 @@
 .skills {
-  padding: 10px 10px $gap*2;
+  padding: ($gap / 2) ($gap / 2) $gap*2;
   @include sm {
     padding: $gap;
   }
   &__container {
     display: grid;
+
   @include lg-min {
-    min-height: 100vh;
-    grid-gap: 10px;
+    grid-gap: ($gap / 2);
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a1 a1 a2 a3"
                          "a4 a5 a5 a6"
                          "a7 a8 a9 a6";
   }
   @include lg-md{
-    grid-gap: 10px;
+    grid-gap: ($gap / 2);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a1 a1 a2"
                          "a3 a4 a4"
@@ -23,7 +23,7 @@
                          "a7 a9 a9";
   }
   @include md-sm {
-    grid-gap: 10px;
+    grid-gap: ($gap / 2);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a1 a2"
                          "a3 a2"
@@ -33,9 +33,10 @@
                          "a8 a9";
   }
   @include sm {
+    grid-gap: $gap; 
     grid-template-columns: 1fr;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
-    grid-gap: $gap;     
+        
   }
 }
   &__button {
@@ -45,10 +46,17 @@
   }
 }
 .skills-item {
-  min-height: calc(230px - 0.66 * 20px);
   position: relative;
   background-color: $color-primary;
-  overflow: hidden;
+  overflow: hidden; 
+
+  @include height-min {
+    min-height: calc(33.333vh - 13.333px);
+  }
+  @include height {
+    min-height: calc(230px - ($gap) * 0.66);
+  }
+
   &__overlay {
     position: absolute;
     top: 0;
@@ -58,6 +66,7 @@
     z-index: 1;
     transition: opacity 0.5s;
   }    
+
   &__image {
     position: absolute;
     top: 0;
@@ -68,16 +77,18 @@
     background-size: cover;
     transition: transform 0.5s;
   }    
+
   &__title {
     margin: 0;
-    position: relative;
-    z-index: 1;
     position: absolute;
+    z-index: 1;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    transition: color 0.5s ease-in-out;
   }
+
   &__link {
     display: flex;
     width: 100%;

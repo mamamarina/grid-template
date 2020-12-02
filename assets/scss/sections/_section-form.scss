@@ -10,7 +10,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "b1 b2 b3";
     @include md-sm {
-      grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas: "b1 b1"
                            "b2 b3";
     }
@@ -34,7 +34,6 @@
       border-bottom: 2px solid $color-gray-light;
     }
     &:focus {
-      outline: none;
       background-color: rgba($color-light, 0.15);
       border: 2px solid $color-gray;
       border-bottom: 2px solid $color-gray-light;

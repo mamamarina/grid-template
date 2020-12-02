@@ -56,6 +56,10 @@
   border-bottom: 2px solid $color-gray;
   letter-spacing: 0.15em;
   transition: 0.5s ease-in-out;
+    &:focus {
+      outline: none;
+      color: $color-light;
+    }
     &:hover::placeholder,
     &:focus::placeholder {
       font-weight: 100;
