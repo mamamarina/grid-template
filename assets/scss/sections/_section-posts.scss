@@ -69,6 +69,7 @@
     display: grid;
     grid-template-rows: $gap*15 1fr;
     background-color: $color-posts-bcground;  
+    transition: background-color 0.5s;
     &:hover .posts-box__image{
       transform: scale(1.1);
     }

@@ -50,12 +50,12 @@
   background-color: $color-primary;
   overflow: hidden; 
 
-  @include height-min {
+  @media (min-height: $h) {
     min-height: calc(33.333vh - 13.333px);
-  }
-  @include height {
-    min-height: calc(230px - ($gap) * 0.66);
-  }
+    }
+  @media (max-height: $h - 0.2) {
+    min-height: calc(230px - 20px * 0.66);
+    }
 
   &__overlay {
     position: absolute;

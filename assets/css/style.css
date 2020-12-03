@@ -450,15 +450,16 @@ template {
   display: none;
 }
 
+/* skills-item-height*/
 /* ul */
 /* xxl */
 /* xl */
 /* lg */
 /* md */
-/* md1 - mixin for min-height*/
 /* sm */
 /* xs */
 /* xx */
+/* height - mixin for min-height*/
 .header-menu__container, .header-content__container, .about__container, .form__container, .posts, .footer__container {
   margin: auto;
   max-width: 1340px;
@@ -1108,6 +1109,9 @@ a {
   display: grid;
   grid-template-rows: 300px 1fr;
   background-color: #f2f2f2;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .posts-box:hover .posts-box__image {
@@ -1223,6 +1227,12 @@ a {
   font-weight: 700;
   color: #e5e5e5;
   letter-spacing: 0.05em;
+}
+
+@media (min-height: 691px) {
+  .skills-item {
+    min-height: calc(33.333vh - 13.333px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -1459,10 +1469,7 @@ a {
   }
 }
 
-@media (max-height: 689.8px) {
-  .skills-item {
-    min-height: calc(33.333vh - 13.333px);
-  }
+@media (max-height: 690.8px) {
   .skills-item {
     min-height: calc(230px - 20px * 0.66);
   }

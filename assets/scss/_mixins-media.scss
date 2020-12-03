@@ -212,14 +212,14 @@
 
 /* height - mixin for min-height*/
 
-@mixin height-min {
-  @media (min-height: $md1) {
-    @content;
-  }
-}
+// @mixin h-min {
+//   @media (min-height: $h) {
+//     @content;
+//   }
+// }
 
-@mixin height {
-  @media (max-height: $md1 - 0.2) {
-    @content;
-  }
-}
+// @mixin h {
+//   @media (max-height: $h - 0.2) {
+//     @content;
+//   }
+// }
