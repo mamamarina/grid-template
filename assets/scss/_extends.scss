@@ -5,3 +5,34 @@
     padding-right: $gap;
   }
 
+%input {
+    display:block;
+    width:100%;
+    height: $gap*3;
+    padding: 0 $gap*1.5 0 $gap*1.5;
+    background-color: rgba($color-light, 0.051);
+    text-align: left;
+    font-size: 1.125rem;
+    color: $color-light;
+    border: 2px solid transparent;
+    border-bottom: 2px solid $color-gray;
+    letter-spacing: 0.15em;
+    transition: 0.5s ease-in-out;
+      &::placeholder {
+        color: $color-gray; 
+      }
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $color-light;
+        background-color: rgba($color-light, 0.15);
+        border: 2px solid $color-gray;
+        border-bottom: 2px solid $color-gray-light;
+      }
+      
+      &:hover::placeholder,
+      &:focus::placeholder {
+        font-weight: 100;
+        color: #8c9bab;
+      }
+}

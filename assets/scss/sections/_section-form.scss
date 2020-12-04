@@ -19,53 +19,40 @@
       grid-template-areas: "b1""b2""b3";
     }
   }
-  &__input {
-  &--email,
-  &--name {
-    @include input;
-  }
-  &--name {
-    &::placeholder {
-      color: $color-gray-light;
-    }
-    &:hover {
-      background-color: rgba($color-light, 0.15);
-      border: 2px solid $color-gray;
-      border-bottom: 2px solid $color-gray-light;
-    }
-    &:focus {
-      background-color: rgba($color-light, 0.15);
-      border: 2px solid $color-gray;
-      border-bottom: 2px solid $color-gray-light;
-    }
-    grid-area: b1;
-  }
-  &--email {
-    &::placeholder {
-      color: $color-gray-mediumone;
-    }
-    grid-area: b2;
-  }
-  &--submit {
-    grid-area: b3;
-  }
-  &--submit {
-    display:block;
-    width:100%;
-    height: $gap*3;
-    padding: 18px $gap;
-    background-color:rgba($color-light, 0.1);
-    text-align: center;
-    letter-spacing: 0.1em;
-    font-size: 1.125rem;
+  &-item {
     color: $color-light;
-    border: 2px solid transparent;
-    border-bottom: 2px solid $color-gray;
-    transition: 0.5s ease-in-out;
-      &:hover {
-      background-color: $color-accent;
-      border: 2px solid $color-light;
+    &__input {
+      &--email,
+      &--name {
+      @extend %input;
       }
+      &--name {
+        grid-area: b1;
+      }
+      &--email {
+        grid-area: b2;
+      }
+      &--submit {
+        grid-area: b3;
+      }
+      &--submit {
+        display:block;
+        width:100%;
+        height: $gap*3;
+        padding: 18px $gap;
+        background-color:rgba($color-light, 0.1);
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-size: 1.125rem;
+        color: $color-light;
+        border: 2px solid transparent;
+        border-bottom: 2px solid $color-gray;
+        transition: 0.5s ease-in-out;
+          &:hover {
+          background-color: $color-accent;
+          border: 2px solid $color-light;
+          }
+        }
+      }    
     }
-  }    
 }
